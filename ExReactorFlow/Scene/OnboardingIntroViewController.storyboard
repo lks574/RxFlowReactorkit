@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LZx-Zh-QtO">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Onboarding Intro View Controller-->
+        <scene sceneID="BSr-oN-D3p">
+            <objects>
+                <viewController storyboardIdentifier="OnboardingIntroViewController" id="LZx-Zh-QtO" customClass="OnboardingIntroViewController" customModule="ExReactorFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9tt-25-m4n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvb-aN-cSh">
+                                <rect key="frame" x="54" y="377" width="306.5" height="142.5"/>
+                                <string key="text">소개 화면입니다.
+
+한번 확인 버튼 이후에 다시 실행하면 
+해당 화면이 나타나지 않도록 하였습니다.
+
+RxFlow 화면 이동 처리 샘플 적용화면 입니다.
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBo-Ny-ayb">
+                                <rect key="frame" x="140" y="732" width="134" height="30"/>
+                                <state key="normal" title="메인화면으로 전환하기"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Zvb-aN-cSh" firstAttribute="centerY" secondItem="9tt-25-m4n" secondAttribute="centerY" id="BUa-KW-NO3"/>
+                            <constraint firstItem="pBo-Ny-ayb" firstAttribute="centerX" secondItem="9tt-25-m4n" secondAttribute="centerX" id="Krf-wr-dso"/>
+                            <constraint firstItem="Zvb-aN-cSh" firstAttribute="centerX" secondItem="9tt-25-m4n" secondAttribute="centerX" id="gsy-7v-vtW"/>
+                            <constraint firstItem="hM5-PA-RBh" firstAttribute="bottom" secondItem="pBo-Ny-ayb" secondAttribute="bottom" constant="100" id="rdb-LS-j82"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hM5-PA-RBh"/>
+                    </view>
+                    <connections>
+                        <outlet property="completeButton" destination="pBo-Ny-ayb" id="RL4-ta-44X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gwm-DO-cA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+</document>
