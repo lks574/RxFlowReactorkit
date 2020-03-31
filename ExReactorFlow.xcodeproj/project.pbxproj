@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1DEC3C8824EF22401196EC3B /* Pods_ExReactorFlow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EED47114C14161EC5B2FAEF2 /* Pods_ExReactorFlow.framework */; };
+		730796342432D5AC00EDD7F6 /* DashboardFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730796332432D5AC00EDD7F6 /* DashboardFlow.swift */; };
+		730796362432D6C500EDD7F6 /* CounterFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730796352432D6C500EDD7F6 /* CounterFlow.swift */; };
 		93451FC12432179600C56479 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93451FC02432179600C56479 /* AppDelegate.swift */; };
 		93451FC32432179600C56479 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93451FC22432179600C56479 /* SceneDelegate.swift */; };
 		93451FC52432179600C56479 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93451FC42432179600C56479 /* ViewController.swift */; };
@@ -51,6 +53,8 @@
 /* Begin PBXFileReference section */
 		2E9C0C145B92BBE2C62A8108 /* Pods-ExReactorFlow-ExReactorFlowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExReactorFlow-ExReactorFlowUITests.debug.xcconfig"; path = "Target Support Files/Pods-ExReactorFlow-ExReactorFlowUITests/Pods-ExReactorFlow-ExReactorFlowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E90AFEF25B95663D21D91C4 /* Pods-ExReactorFlow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExReactorFlow.release.xcconfig"; path = "Target Support Files/Pods-ExReactorFlow/Pods-ExReactorFlow.release.xcconfig"; sourceTree = "<group>"; };
+		730796332432D5AC00EDD7F6 /* DashboardFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardFlow.swift; sourceTree = "<group>"; };
+		730796352432D6C500EDD7F6 /* CounterFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterFlow.swift; sourceTree = "<group>"; };
 		85809825F7CDD243C24F4C1D /* Pods-ExReactorFlow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExReactorFlow.debug.xcconfig"; path = "Target Support Files/Pods-ExReactorFlow/Pods-ExReactorFlow.debug.xcconfig"; sourceTree = "<group>"; };
 		9154905758449F278F0E670F /* Pods_ExReactorFlowTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExReactorFlowTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93451FBD2432179600C56479 /* ExReactorFlow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExReactorFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +138,23 @@
 				FC34DC95114D9703617DEC78 /* Pods-ExReactorFlowTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		730796312432CB6A00EDD7F6 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		730796322432CB7300EDD7F6 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				9345200B2432C3DE00C56479 /* OnboardingIntroViewController.storyboard */,
+				934520072432212100C56479 /* OnboardingIntroViewController.swift */,
+				934520092432218600C56479 /* OnboardingIntroViewReactor.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		93451FB42432179600C56479 = {
@@ -225,8 +246,10 @@
 			children = (
 				93451FFD24321C1200C56479 /* SampleStep.swift */,
 				9345200024321C3500C56479 /* AppFlow.swift */,
+				730796332432D5AC00EDD7F6 /* DashboardFlow.swift */,
 				9345200224321D5900C56479 /* OnboardingFlow.swift */,
 				9345200424321F4500C56479 /* AppStepper.swift */,
+				730796352432D6C500EDD7F6 /* CounterFlow.swift */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -234,9 +257,8 @@
 		934520062432211000C56479 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				9345200B2432C3DE00C56479 /* OnboardingIntroViewController.storyboard */,
-				934520072432212100C56479 /* OnboardingIntroViewController.swift */,
-				934520092432218600C56479 /* OnboardingIntroViewReactor.swift */,
+				730796322432CB7300EDD7F6 /* Onboarding */,
+				730796312432CB6A00EDD7F6 /* Dashboard */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -487,10 +509,12 @@
 				93451FC12432179600C56479 /* AppDelegate.swift in Sources */,
 				93451FC32432179600C56479 /* SceneDelegate.swift in Sources */,
 				93451FCB2432179600C56479 /* ExReactorFlow.xcdatamodeld in Sources */,
+				730796362432D6C500EDD7F6 /* CounterFlow.swift in Sources */,
 				9345200A2432218600C56479 /* OnboardingIntroViewReactor.swift in Sources */,
 				93451FFB24321A4800C56479 /* Logger.swift in Sources */,
 				9345200524321F4500C56479 /* AppStepper.swift in Sources */,
 				934520082432212100C56479 /* OnboardingIntroViewController.swift in Sources */,
+				730796342432D5AC00EDD7F6 /* DashboardFlow.swift in Sources */,
 				93451FF52432193200C56479 /* PreferencesService.swift in Sources */,
 				9345200324321D5900C56479 /* OnboardingFlow.swift in Sources */,
 				93451FF824321A1200C56479 /* BaseViewController.swift in Sources */,
