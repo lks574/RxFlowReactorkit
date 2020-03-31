@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TMc-ZB-IyQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Counter View Controller-->
+        <scene sceneID="sO1-I5-G0j">
+            <objects>
+                <viewController storyboardIdentifier="CounterViewController" id="TMc-ZB-IyQ" customClass="CounterViewController" customModule="ExReactorFlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aph-12-1dZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cz3-j3-lya">
+                                <rect key="frame" x="198.5" y="431.5" width="17" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJt-lQ-p9f">
+                                <rect key="frame" x="40" y="425" width="30" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="-"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TEa-55-f8J">
+                                <rect key="frame" x="344" y="425" width="30" height="46"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <state key="normal" title="+"/>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="ug0-6v-Xvw">
+                                <rect key="frame" x="197" y="505" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="https://github.com/ReactorKit/ReactorKit/blob/master/Examples/Counter/README.md" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luX-pm-zCy">
+                                <rect key="frame" x="20" y="808.5" width="374" height="33.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h7P-1X-ylc">
+                                <rect key="frame" x="20" y="808.5" width="374" height="33.5"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="h7P-1X-ylc" firstAttribute="trailing" secondItem="luX-pm-zCy" secondAttribute="trailing" id="3Uj-UK-dVC"/>
+                            <constraint firstItem="luX-pm-zCy" firstAttribute="leading" secondItem="smQ-NH-rbJ" secondAttribute="leading" constant="20" id="E32-aO-9gP"/>
+                            <constraint firstItem="smQ-NH-rbJ" firstAttribute="trailing" secondItem="TEa-55-f8J" secondAttribute="trailing" constant="40" id="IEr-DE-xjQ"/>
+                            <constraint firstItem="gJt-lQ-p9f" firstAttribute="centerY" secondItem="cz3-j3-lya" secondAttribute="centerY" id="LNG-U9-wv7"/>
+                            <constraint firstItem="h7P-1X-ylc" firstAttribute="top" secondItem="luX-pm-zCy" secondAttribute="top" id="Pig-30-3yX"/>
+                            <constraint firstItem="cz3-j3-lya" firstAttribute="centerY" secondItem="Aph-12-1dZ" secondAttribute="centerY" id="QQ8-S6-c4O"/>
+                            <constraint firstItem="ug0-6v-Xvw" firstAttribute="top" secondItem="cz3-j3-lya" secondAttribute="bottom" constant="40" id="VBi-ly-64t"/>
+                            <constraint firstItem="h7P-1X-ylc" firstAttribute="bottom" secondItem="luX-pm-zCy" secondAttribute="bottom" id="cga-nO-zQJ"/>
+                            <constraint firstItem="cz3-j3-lya" firstAttribute="centerX" secondItem="Aph-12-1dZ" secondAttribute="centerX" id="olY-kc-5Ve"/>
+                            <constraint firstItem="h7P-1X-ylc" firstAttribute="leading" secondItem="luX-pm-zCy" secondAttribute="leading" id="psR-ZQ-9T8"/>
+                            <constraint firstItem="smQ-NH-rbJ" firstAttribute="bottom" secondItem="luX-pm-zCy" secondAttribute="bottom" constant="20" id="r4s-FC-VU3"/>
+                            <constraint firstItem="gJt-lQ-p9f" firstAttribute="leading" secondItem="smQ-NH-rbJ" secondAttribute="leading" constant="40" id="rUw-3X-3lW"/>
+                            <constraint firstItem="TEa-55-f8J" firstAttribute="centerY" secondItem="cz3-j3-lya" secondAttribute="centerY" id="wXC-yE-mjl"/>
+                            <constraint firstItem="ug0-6v-Xvw" firstAttribute="centerX" secondItem="cz3-j3-lya" secondAttribute="centerX" id="wXZ-bG-hqv"/>
+                            <constraint firstItem="smQ-NH-rbJ" firstAttribute="trailing" secondItem="luX-pm-zCy" secondAttribute="trailing" constant="20" id="yR7-It-EMh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="smQ-NH-rbJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicatorView" destination="ug0-6v-Xvw" id="AC2-3e-jFr"/>
+                        <outlet property="decreaseButton" destination="gJt-lQ-p9f" id="hft-sR-0NJ"/>
+                        <outlet property="increaseButton" destination="TEa-55-f8J" id="em2-bO-Hy5"/>
+                        <outlet property="linkButton" destination="h7P-1X-ylc" id="cdB-SE-pfB"/>
+                        <outlet property="valueLabel" destination="cz3-j3-lya" id="CtQ-KK-naR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cN-Fe-g9H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="128" y="138"/>
+        </scene>
+    </scenes>
+</document>

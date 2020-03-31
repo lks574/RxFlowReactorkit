@@ -31,6 +31,8 @@ final class AppFlow: Flow {
         switch step {
         case .onboardingIsRequired:
             return navigationToOnboardingScreen()
+        case .onboardingIsComplete, .dashboardIsRequired:
+            return navigationToDashboardScreen()
         default:
             return .none
         }
@@ -46,6 +48,15 @@ final class AppFlow: Flow {
         }
         
         return .one(flowContributor: FlowContributor.contribute(withNextPresentable: onboardingFlow, withNextStepper: OneStepper(withSingleStep: SampleStep.introIsRequired)))
+    }
+    
+    
+    private func navigationToDashboardScreen() -> FlowContributors {
+        let dashboardFlow = DashboardFlow(withServices: self.services)
+        Flows.whenReady(flow1: dashboardFlow) { [unowned self] (root) in
+            self.rootWindow.rootViewController = root
+        }
+        return .one(flowContributor: .contribute(withNextPresentable: dashboardFlow, withNextStepper: OneStepper(withSingleStep: SampleStep.dashboardIsRequired)))
     }
     
     

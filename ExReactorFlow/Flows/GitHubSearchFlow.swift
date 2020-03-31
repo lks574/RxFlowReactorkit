@@ -1,16 +1,14 @@
 //
-//  CounterFlow.swift
+//  GitHubSearchFlow.swift
 //  ExReactorFlow
 //
 //  Created by Moon on 2020/03/31.
 //  Copyright © 2020 KyungSeok Lee. All rights reserved.
 //
 
-import Foundation
-import RxFlow
+import UIKit
 
-final class CounterFlow: Flow {
-    
+final class GitHubSearchFlow: Flow {
     var root: Presentable {
         return self.rootViewController
     }
@@ -29,19 +27,17 @@ final class CounterFlow: Flow {
     func navigate(to step: Step) -> FlowContributors {
         guard let step = step as? SampleStep else { return .none }
         switch step {
-        case .counterIsRequired:
-            return navigateToCounterScreen()
+        case .gitHubSearchIsRequired:
+            return navigateToGitHubSearchScreen()
         default:
             return .none
         }
     }
     
-    
-    private func navigateToCounterScreen() -> FlowContributors {
-        let viewController = CounterViewController.instantiate()
-        viewController.title = "Counter"
-        
+    private func navigateToGitHubSearchScreen() -> FlowContributors {
+        let viewController = GitHubSearchViewController.instantiate()
+        viewController.title = "GitHubSearch"
         self.rootViewController.pushViewController(viewController, animated: true)
-        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: OneStepper(withSingleStep: SampleStep.counterIsRequired)))
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: OneStepper(withSingleStep: SampleStep.gitHubSearchIsRequired)))
     }
 }
